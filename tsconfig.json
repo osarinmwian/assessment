@@ -1,3 +1,24 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@shared/*": ["src/shared/*"],
+      "@screens/*": ["src/screens/*"],
+      "@shared/navigation/*": ["src/shared/navigation/*"],
+      "@shared/utils/*": ["src/shared/utils/*"],
+      "@shared/api/*": ["src/shared/api/*"],
+      "@/shared/components": ["src/shared/components/*"],
+      "@/shared/assets": ["src/shared/assets/*"]
+    }
+  },
+  "include": [
+    "src",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./types/@env/index.d.ts"
+  ]
 }
