@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, ViewStyle, StyleProp} from 'react-native';
-import BaseButton from '../baseButton/BaseButton';
-import ViewWrapper from '../view/ViewWrapper';
+import BaseButton from '../baseButton/baseButton';
+import ViewWrapper from "../view/viewWrapper"
 import {widthPixelToDP as WP} from '@/shared/utils/util';
 import {theme} from '@/shared/assets/colors/theme';
 
@@ -35,10 +35,10 @@ const AppLayout: React.FC<AppLayoutProps> = ({
   return (
     <ViewWrapper
       style={[
-        styles.container,
+        
         {
           paddingBottom: WP(30),
-          marginHorizontal: sideSpacing ? 0 : WP(5),
+          marginHorizontal: sideSpacing ? 0 : WP(15),
         },
         containerStyle as ViewStyle,
       ]}>

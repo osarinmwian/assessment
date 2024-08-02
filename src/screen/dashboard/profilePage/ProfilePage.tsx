@@ -1,13 +1,12 @@
 import React from 'react';
-import ViewWrapper from '@/shared/component/view/viewWrapper';
 import Basic from '@/shared/component/text/basic/basic';
-
+import AppLayout from '../../../shared/component/layout/layout';
 
 const ProfilePage: React.FC = () => {
   return (
-  <ViewWrapper>
-    <Basic title='PROFILE PAGE '/>
-  </ViewWrapper>
+    <AppLayout>
+      <Basic title="PROFILE PAGE " />
+    </AppLayout>
   );
 };
 
