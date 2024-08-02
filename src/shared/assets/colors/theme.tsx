@@ -45,7 +45,6 @@ export const theme = {
     lightGray: '#AAAFB9',
     borderGray: 'rgba(223, 232, 252, 0.3)',
     duro: '#080511',
-
     ratingtext: '#2254D3',
     videobackground: '#FF3D00',
     emergencyselect: '#0C1941',

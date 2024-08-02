@@ -2,7 +2,7 @@ import React, {ReactNode} from 'react';
 import {LayoutChangeEvent, View, ViewStyle} from 'react-native';
 
 interface ViewWrapperProps {
-  style?: ViewStyle;
+  style?: ViewStyle | ViewStyle[];
   children?: ReactNode;
   onLayout?:((event: LayoutChangeEvent) => void) | undefined
 }

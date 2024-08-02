@@ -6,9 +6,9 @@ import { SIZES, WEIGHT } from "@/shared/assets/colors";
 
 interface BasicProps {
   title: string;
-  textStyle?: TextStyle; 
-  color?: TextStyle;  
-  basicContainerStyle?: ViewStyle; 
+  textStyle?: TextStyle | TextStyle[]; 
+  color?: TextStyle | TextStyle[];
+  basicContainerStyle?: ViewStyle | ViewStyle[]; 
 }
 
 const Basic: React.FC<BasicProps> = ({ title, textStyle, color, basicContainerStyle }) => {
@@ -24,7 +24,7 @@ const Basic: React.FC<BasicProps> = ({ title, textStyle, color, basicContainerSt
 const styles = StyleSheet.create({
   text: {
     fontSize: SIZES.xMMXMedium,
-    fontWeight: WEIGHT.medium,
+    fontWeight: WEIGHT.normal,
   },
 });
 

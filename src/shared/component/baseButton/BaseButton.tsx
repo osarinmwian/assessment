@@ -15,10 +15,9 @@ interface BaseButtonProps {
   backgroundColor?: string;
   color?: string;
   disabled?: boolean;
-  touchableStyle?: ViewStyle;
-  textStyle?: TextStyle;
+  buttonStyle?:  ViewStyle | ViewStyle[];
+  textStyle?: TextStyle | TextStyle[];
   buttonLoading?: boolean;
-  buttonActivityLoading?: boolean;
 }
 
 const BaseButton: React.FC<BaseButtonProps> = ({
@@ -27,7 +26,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
   backgroundColor,
   color,
   disabled = false,
-  touchableStyle,
+  buttonStyle,
   textStyle,
   buttonLoading = false,
 }) => {
@@ -45,7 +44,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
         {
           opacity: disabledOpacity,
         },
-        touchableStyle,
+        buttonStyle,
       ]}
       onPress={onPress}
       disabled={disabled}>
@@ -55,11 +54,11 @@ const BaseButton: React.FC<BaseButtonProps> = ({
         }}>
         <Basic
           textStyle={
-            StyleSheet.flatten([
+           [
               styles.buttontext,
               {color: buttonLoading ? theme.color.primary : color},
-              textStyle,
-            ]) as TextStyle
+              textStyle as TextStyle,
+            ] 
           }
           title={buttonLoading ? 'LOADING....' : title}
         />

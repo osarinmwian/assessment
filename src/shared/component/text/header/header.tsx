@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ title, textStyle, color, basicContainer
 const styles = StyleSheet.create({
   text: {
     fontSize: SIZES.xLarge,
-    fontWeight: WEIGHT.medium,
+    fontWeight: WEIGHT.normal,
   },
 });
 
