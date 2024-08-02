@@ -25,11 +25,12 @@ export const SIZES = {
   };
   
   export const WEIGHT = {
-    small: "200",
-    medium: "400",
-    regular: "500",
-    semibold: "600",
-    bold: "700",
-    extrabold: "800",
+    small: "200" as "200",  
+    medium: "400" as "400",
+    regular: "500" as "500",
+    semibold: "600" as "600",
+    bold: "700" as "700",
+    extrabold: "800" as "800",
   };
+  
   
