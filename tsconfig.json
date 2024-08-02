@@ -8,7 +8,7 @@
       "@assets/*": ["src/assets/*"],
       "@shared/*": ["src/shared/*"],
       "@screens/*": ["src/screens/*"],
-      "@shared/navigation/*": ["src/shared/navigation/*"],
+      "@shared/navigations/*": ["src/shared/component/navigations/*"],
       "@shared/utils/*": ["src/shared/utils/*"],
       "@shared/api/*": ["src/shared/api/*"],
       "@/shared/components": ["src/shared/components/*"],

@@ -20,7 +20,7 @@ module.exports = function (api) {
             "@/shared": "./src/shared",
             "@assets*": "./src/assets",
             "@/shared/components": "./src/shared/components",
-            "@/shared/navigation": "./src/shared/navigation",
+            "@/shared/navigations": "./src/shared/navigations",
             "@screens":"./src/screen",
             "@shared/utils": "./src/shared/utils",
             "@shared/api": "./src/shared/api",
