@@ -11,7 +11,7 @@ interface HeaderProps {
   basicContainerStyle?: ViewStyle; 
 }
 
-const Basic: React.FC<HeaderProps> = ({ title, textStyle, color, basicContainerStyle }) => {
+const Header: React.FC<HeaderProps> = ({ title, textStyle, color, basicContainerStyle }) => {
   return (
     <ViewWrapper style={basicContainerStyle}>
       <Text style={[styles.text, textStyle, color]} allowFontScaling={true}>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Basic;
+export default Header;
