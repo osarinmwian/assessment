@@ -3,6 +3,7 @@ import { NavigationProp, RouteProp } from '@react-navigation/native';
 export type RouteParmaList = {
   LandingPage: undefined;
   ProfilePage: undefined;
+  BottomTabNavigation: undefined;
 };
 
 export type RoutesStackParmaList<T extends keyof RouteParmaList> = {

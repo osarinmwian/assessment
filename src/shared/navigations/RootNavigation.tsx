@@ -1,7 +1,8 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { RouteParmaList } from './paramsList/paramsList'; 
-import LandingPage from '@/screen/dashboard/landingPage/LandingPage';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {RouteParmaList} from './paramsList/paramsList';
+import LandingPage from '../../screen/dashboard/landingPage/LandingPage';
+import BottomTabNavigation from './BottomNavigation';
 
 const RootStack = createNativeStackNavigator<RouteParmaList>();
 
@@ -12,15 +13,19 @@ const RootNavigation = () => {
         headerShown: false,
         animation: 'slide_from_right',
         animationDuration: 50,
-        contentStyle: { backgroundColor: 'white' },
+        contentStyle: {backgroundColor: 'white'},
         animationTypeForReplace: 'push',
         customAnimationOnGesture: true,
-      }}
-    >
+      }}>
+      <RootStack.Screen
+        name="BottomTabNavigation"
+        component={BottomTabNavigation}
+        options={{headerShown: false}}
+      />
       <RootStack.Screen
         name="LandingPage"
-        component={LandingPage} 
-        options={{ headerShown: false }}
+        component={LandingPage}
+        options={{headerShown: false}}
       />
     </RootStack.Navigator>
   );

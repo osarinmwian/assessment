@@ -1,8 +1,8 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {theme} from '@/shared/assets/colors/theme';
-import LandingPage from '@/screen/dashboard/landingPage/LandingPage';
-import ProfilePage from '@/screen/dashboard/profilePage/ProfilePage';
+import LandingPage from '../../screen/dashboard/landingPage/LandingPage';
+import ProfilePage from '../../screen/dashboard/profilePage/ProfilePage';
 
 const Tab = createBottomTabNavigator();
 
