@@ -1,6 +1,8 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {theme} from '@/shared/assets/colors/theme';
+import LandingPage from '@/screen/dashboard/landingPage/LandingPage';
+import ProfilePage from '@/screen/dashboard/profilePage/ProfilePage';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,14 +15,14 @@ const BottomTabNavigation: React.FC = () => {
         tabBarInactiveTintColor: theme.color.gray,
       }}>
       <Tab.Screen
-        name="Home"
-        // component={HomeScreen}
-        options={{title: 'Home'}}
+        name="LandingPage"
+        component={LandingPage}
+        options={{title: 'LandingPage'}}
       />
       <Tab.Screen
-        name="Profile"
-        // component={ProfileScreen}
-        options={{title: 'Profile'}}
+        name="ProfilePage"
+        component={ProfilePage}
+        options={{title: 'ProfilePage'}}
       />
     </Tab.Navigator>
   );

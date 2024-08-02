@@ -1,7 +1,8 @@
 import { NavigationProp, RouteProp } from '@react-navigation/native';
 
 export type RouteParmaList = {
-  Home: undefined;
+  LandingPage: undefined;
+  ProfilePage: undefined;
 };
 
 export type RoutesStackParmaList<T extends keyof RouteParmaList> = {
