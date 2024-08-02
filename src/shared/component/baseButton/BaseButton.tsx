@@ -74,9 +74,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: WP(14),
+    height: WP(50),
     width: '100%',
-    borderRadius: WP(2),
+    borderRadius: WP(10),
     marginTop: WP(1.8),
   },
 

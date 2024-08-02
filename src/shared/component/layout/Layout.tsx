@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, ViewStyle, StyleProp} from 'react-native';
 import BaseButton from '../baseButton/baseButton';
 import ViewWrapper from "../view/viewWrapper"
-import {widthPixelToDP as WP} from '@/shared/utils/util';
+import {heightPixelToDP as HP, widthPixelToDP as WP} from '@/shared/utils/util';
 import {theme} from '@/shared/assets/colors/theme';
 
 interface AppLayoutProps {
@@ -35,7 +35,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({
   return (
     <ViewWrapper
       style={[
-        
+        styles.container,
         {
           paddingBottom: WP(30),
           marginHorizontal: sideSpacing ? 0 : WP(15),
@@ -55,13 +55,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({
             }
             color={bottomButtonColor ? bottomButtonColor : theme.color.primary}
             buttonLoading={bottomButtonLoading}
-            buttonStyle={[
-              {
-                width: WP(90),
-                borderRadius: WP(2),
-              },
-              bottomButtonStyle as ViewStyle,
-            ]}
+            
             onPress={bottomButtonPress}
             disabled={bottomButtonDisabled}
           />
@@ -83,5 +77,7 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
     right: 0,
+    marginBottom: HP(10)
+ 
   },
 });
