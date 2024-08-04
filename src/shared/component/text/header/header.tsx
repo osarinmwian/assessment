@@ -1,12 +1,13 @@
 import React from 'react';
-import { Text, StyleSheet, TextStyle, ViewStyle } from 'react-native';
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import ViewWrapper from "../../view/viewWrapper";
 import { SIZES, WEIGHT } from "@/shared/assets/colors";
+import TextBox from "../index"
 
 
 interface HeaderProps {
   title: string;
-  textStyle?: TextStyle; 
+  textStyle?: TextStyle ; 
   color?: TextStyle;  
   basicContainerStyle?: ViewStyle; 
 }
@@ -14,9 +15,9 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, textStyle, color, basicContainerStyle }) => {
   return (
     <ViewWrapper style={basicContainerStyle}>
-      <Text style={[styles.text, textStyle, color]} allowFontScaling={true}>
+      <TextBox style={[styles.text, textStyle as TextStyle, color as TextStyle]}>
         {title}
-      </Text>
+      </TextBox>
     </ViewWrapper>
   );
 };

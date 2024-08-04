@@ -1,6 +1,7 @@
 import {SIZES, WEIGHT} from '@/shared/assets/colors';
 import {theme} from '@/shared/assets/colors/theme';
-import {useTheme} from '@/shared/assets/colors/ThemeProvider';
+import {  useThemeHook } from '@/shared/assets/colors/ThemeProvider';
+
 import {fontPixelToDP, hexToRGB} from '@/shared/utils/util';
 import * as React from 'react';
 import {Text, StyleSheet, TextStyle} from 'react-native';
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
 
 interface TextBoxProps {
   children?: React.ReactNode;
-  style?: TextStyle;
+  style?: TextStyle  | TextStyle[];
   onPress?: () => void;
   numberOfLines?: number;
 }
@@ -26,7 +27,7 @@ const TextBox: React.FC<TextBoxProps> = ({
   onPress,
   numberOfLines,
 }) => {
-  const {colors} = useTheme();
+  const {colors} =  useThemeHook();
   return (
     <Text
       style={[{...styles.text, color: colors.text}, style]}

@@ -1,22 +1,28 @@
 import React from 'react';
-import { Text, StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import ViewWrapper from "../../view/viewWrapper";
-import { SIZES, WEIGHT } from "@/shared/assets/colors";
-
+import { StyleSheet, TextStyle, ViewStyle} from 'react-native';
+import ViewWrapper from '../../view/viewWrapper';
+import {SIZES, WEIGHT} from '@/shared/assets/colors';
+import TextBox from '../index';
 
 interface BasicProps {
-  title: string;
-  textStyle?: TextStyle | TextStyle[]; 
+  title: string | undefined;
+  textStyle?: TextStyle | TextStyle[];
   color?: TextStyle | TextStyle[];
-  basicContainerStyle?: ViewStyle | ViewStyle[]; 
+  basicContainerStyle?: ViewStyle | ViewStyle[];
 }
 
-const Basic: React.FC<BasicProps> = ({ title, textStyle, color, basicContainerStyle }) => {
+const Basic: React.FC<BasicProps> = ({
+  title,
+  textStyle,
+  color,
+  basicContainerStyle,
+}) => {
   return (
     <ViewWrapper style={basicContainerStyle} onLayout={undefined}>
-      <Text style={[styles.text, textStyle, color]} allowFontScaling={true}>
+      <TextBox
+        style={[styles.text, textStyle as TextStyle, color as TextStyle]}>
         {title}
-      </Text>
+      </TextBox>
     </ViewWrapper>
   );
 };

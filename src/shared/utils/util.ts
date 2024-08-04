@@ -1,4 +1,5 @@
-import {Dimensions, PixelRatio} from 'react-native';
+import {Dimensions, PixelRatio, Animated} from 'react-native';
+import RNStorage from './storage';
 
 export type Currency =
   | 'USD'
@@ -127,3 +128,42 @@ const heightPixelToDP = (size: number): number => normalize(size, 'height');
 const fontPixelToDP = (size: number): number => heightPixelToDP(size);
 
 export {fontPixelToDP, heightPixelToDP, widthPixelToDP};
+
+export const triggerShakeAnimation = (
+  animValue: Animated.Value | Animated.ValueXY,
+) => {
+  Animated.sequence([
+    Animated.timing(animValue, {
+      toValue: -10,
+      duration: 100,
+      useNativeDriver: true,
+    }),
+    Animated.timing(animValue, {
+      toValue: 10,
+      duration: 100,
+      useNativeDriver: true,
+    }),
+    Animated.timing(animValue, {
+      toValue: -10,
+      duration: 100,
+      useNativeDriver: true,
+    }),
+    Animated.timing(animValue, {
+      toValue: 0,
+      duration: 100,
+      useNativeDriver: true,
+    }),
+  ]).start();
+};
+
+
+
+export const getToken = async () => {
+  try {
+    const token = await RNStorage.getItem("token");
+    return token || "";
+  } catch (error) {
+    // console.log("ERROR FORM", error);
+    return null;
+  }
+};
