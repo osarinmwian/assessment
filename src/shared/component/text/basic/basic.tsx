@@ -5,7 +5,7 @@ import {SIZES, WEIGHT} from '@/shared/assets/colors';
 import TextBox from '../index';
 
 interface BasicProps {
-  title: string | undefined;
+  title: string | undefined | string[];
   textStyle?: TextStyle | TextStyle[];
   color?: TextStyle | TextStyle[];
   basicContainerStyle?: ViewStyle | ViewStyle[];

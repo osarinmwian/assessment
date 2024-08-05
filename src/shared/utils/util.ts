@@ -24,17 +24,7 @@ export type Currency =
   | 'CHF'
   | 'MYR';
 
-export type PaymentMethod =
-  | 'card'
-  | 'bank_transfer'
-  | 'mobile_money'
-  | 'crypto'
-  | 'paypal'
-  | 'apple_pay'
-  | 'google_pay'
-  | 'alipay'
-  | 'wechat_pay'
-  | 'ussd';
+
 
 export const Currency = (currency: string) => {
   const currencyUpper = currency?.toUpperCase();

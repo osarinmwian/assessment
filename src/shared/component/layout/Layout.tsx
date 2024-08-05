@@ -19,7 +19,7 @@ interface AppLayoutProps {
   bottomButtonDisabled?: boolean;
 }
 
-const AppLayout: React.FC<AppLayoutProps> = ({
+const Layout: React.FC<AppLayoutProps> = ({
   sideSpacing = false,
   containerStyle,
   children,
@@ -65,7 +65,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({
   );
 };
 
-export default React.memo(AppLayout);
+export default React.memo(Layout);
 
 const styles = StyleSheet.create({
   container: {

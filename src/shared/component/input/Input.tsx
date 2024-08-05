@@ -16,16 +16,16 @@ import { widthPixelToDP as WP } from '@/shared/utils/util';
 import { useThemeHook } from '@/shared/assets/colors/ThemeProvider';
 
 // Define the props interface
-interface SimpleInputProps extends TextInputProps {
+interface InputProps extends TextInputProps {
   placeholder?: string;
   passwordShow?: boolean;
-  error?: string;
+  error?: any;
   isLabel?: boolean;
   label?: string;
   containerStyle?: ViewStyle;
 }
 
-const SimpleInput: React.FC<SimpleInputProps> = ({
+const Input: React.FC<InputProps> = ({
   placeholder,
   passwordShow,
   error,
@@ -88,7 +88,7 @@ const SimpleInput: React.FC<SimpleInputProps> = ({
   );
 };
 
-export default React.memo(SimpleInput);
+export default React.memo(Input);
 
 const styles = StyleSheet.create({
   parent: {

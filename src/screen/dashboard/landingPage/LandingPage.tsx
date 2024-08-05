@@ -1,13 +1,13 @@
 import React from 'react';
 import Basic from '@/shared/component/text/basic/basic';
-import AppLayout from "../../../shared/component/layout/layout"
+import Layout from '../../../shared/component/layout/layout';
 
 
 const LandingPage: React.FC = () => {
   return (
-  <AppLayout>
+  <Layout>
     <Basic title='LANDING PAGE '/>
-  </AppLayout>
+  </Layout>
   );
 };
 
