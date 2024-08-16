@@ -2,7 +2,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RouteParmaList} from './paramsList/paramsList';
 import BottomTabNavigation from './BottomNavigation';
-import DetailPage from '../../screen/dashboard/profilePage/DetailPage';
+import DetailPage from '../../screen/dashboard/detailPage/DetailPage';
 
 
 

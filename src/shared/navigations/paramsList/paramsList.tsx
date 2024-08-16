@@ -1,7 +1,7 @@
 import { NavigationProp, RouteProp } from '@react-navigation/native';
 
 export type RouteParmaList = {
-  DetailPage: undefined;
+  DetailPage: { id: number };
   HomePage: undefined;
   BottomTabNavigation: undefined;
 };
