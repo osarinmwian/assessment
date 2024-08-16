@@ -1,5 +1,4 @@
 const baseURLs: any = {
-  devEnviron: '',
-  prodevEnviron: '',
+baseUrl: '',
 };
 export const getBaseUrl = (type: string) => baseURLs[type];

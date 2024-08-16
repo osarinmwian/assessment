@@ -25,6 +25,7 @@
     "formik": "^2.4.6",
     "husky": "^9.0.11",
     "react": "18.2.0",
+    
     "react-native": "0.73.7",
     "react-native-dotenv": "^3.4.2",
     "react-native-geolocation-service": "^5.3.1",

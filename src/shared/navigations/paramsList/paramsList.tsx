@@ -1,8 +1,8 @@
 import { NavigationProp, RouteProp } from '@react-navigation/native';
 
 export type RouteParmaList = {
-  LandingPage: undefined;
-  ProfilePage: undefined;
+  DetailPage: undefined;
+  HomePage: undefined;
   BottomTabNavigation: undefined;
 };
 

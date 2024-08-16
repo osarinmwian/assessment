@@ -1,8 +1,8 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RouteParmaList} from './paramsList/paramsList';
-import LandingPage from '../../screen/dashboard/landingPage/LandingPage';
 import BottomTabNavigation from './BottomNavigation';
+import DetailPage from '@/screen/dashboard/profilePage/DetailPage';
 
 const RootStack = createNativeStackNavigator<RouteParmaList>();
 
@@ -23,8 +23,8 @@ const RootNavigation = () => {
         options={{headerShown: false}}
       />
       <RootStack.Screen
-        name="LandingPage"
-        component={LandingPage}
+        name="DetailPage"
+        component={DetailPage}
         options={{headerShown: false}}
       />
     </RootStack.Navigator>
