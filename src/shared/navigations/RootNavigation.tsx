@@ -4,6 +4,11 @@ import {RouteParmaList} from './paramsList/paramsList';
 import BottomTabNavigation from './BottomNavigation';
 import DetailPage from '@/screen/dashboard/profilePage/DetailPage';
 
+
+
+
+
+
 const RootStack = createNativeStackNavigator<RouteParmaList>();
 
 const RootNavigation = () => {
